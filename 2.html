@@ -1,0 +1,32 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <header>
+  </header>
+  <body>
+  </body>
+  <footer>
+  </footer>
+</html>
+<script>
+var pcing = 5.00;
+var despesas = 200.00;
+var ingv = 120;
+var auming = 26;
+
+document.write("<table>");
+document.write("<tr><th>Valor do Ingresso (R$)</th><th>Vendidos</th><th>Lucro R$</th></tr>");
+
+while  (pcing >= 1.00) {
+  var lucro =  (pcing * (ingv + auming)) - despesas;
+  document.write("<tr>");
+  document.write("<td>" + pcing.toFixed(2) + "</td>");
+  document.write("<td>" + (ingv + auming) + "</td>");
+  document.write("<td>" + lucro.toFixed(2) + "</td>");
+  document.write("</tr>");
+ pcing -= 0.50;
+}
+
+document.write("</table>");
+</script>
