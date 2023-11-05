@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a>
+        Uma loja utiliza o código V para transação à vista e P para transação a prazo. Faça um programa que receba
+o código e o valor de quinze transações, calcule e mostre:</a><br>
+<a>■■ o valor total das compras à vista;</a><br>
+<a>■■ o valor total das compras a prazo;</a><br>
+<a>■■ o valor total das compras efetuadas; e</a><br>
+<a>■■ o valor da primeira prestação das compras a prazo juntas, sabendo-se que serão pagas em três vezes 
+    </a><br><hr>
+  </body>
+</html>
+<script>
+var vlttv = 0;
+var vlttpz = 0;
+
+for (var i = 1; i <= 15; i++) {
+  var cod = prompt("Digite o código da transação " + i + " (V para à vista, P para a prazo):");
+  var valor = parseFloat(prompt("Digite o valor da transação " + i + ":"));
+
+  if (cod === "V"|cod === "v") {
+    vlttv += valor;
+  } else if (cod === "P"| cod === "p") {
+    vlttpz += valor;
+  }
+}
+
+var valorTotalCompras = vlttv + vlttpz;
+
+document.write("Valor total das compras à vista: R$" + vlttv.toFixed(2) + "<br>");
+document.write("Valor total das compras a prazo: R$" + vlttpz.toFixed(2) + "<br>");
+document.write("Valor total das compras efetuadas: R$" + valorTotalCompras.toFixed(2) + "<br>");
+</script>

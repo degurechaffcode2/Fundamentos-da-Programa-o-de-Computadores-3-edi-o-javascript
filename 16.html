@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a>
+        Faça um programa que receba várias idades, calcule e mostre a média das idades digitadas. Finalize digitando idade igual a zero.
+    </a><hr>
+  </body>
+</html>
+
+<script>
+var smid = 0;
+var contid = 0;
+var id = parseInt(prompt("Digite uma idade (ou 0 para finalizar):"));
+
+while (id !== 0) {
+  smid += id;
+  contid++;
+  id = parseInt(prompt("Digite uma idade (ou 0 para finalizar):"));
+}
+var mediaIdades = smid / contid;
+document.write("A média das idades digitadas é: " + mediaIdades.toFixed(2));
+</script>

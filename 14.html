@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a>
+        Cada espectador de um cinema respondeu a um questionário no qual constava sua idade e sua opinião</br>
+        em relação ao filme: ótimo — 3; bom — 2; regular — 1. Faça um programa que receba a idade e a opinião de quinze espectador, calcule e mostre:</br>
+        ■■ a média das idades das pessoas que responderam ótimo;</br>
+        ■■ a quantidade de pessoas que responderam regular; e</br>
+        ■■ a percentagem de pessoas que responderam bom, entre todos os espectador analisados.</br> 
+    </a><hr>
+  </body>
+</html>
+<script>
+var espc = 15;
+var ttidot = 0;
+var ttot = 0;
+var ttreg = 0;
+var ttbom = 0;
+
+for (var i = 1; i <= espc; i++) {
+  var id = parseInt(prompt("Idade do espectador " + i + ":"));
+  var op = parseInt(prompt("Opinião do espectador " + i + " (3-ótimo, 2-bom, 1-regular):"));
+
+  if (op === 3) {
+    ttidot += id;
+    ttot++;
+  } else if (op === 1) {
+    ttreg++;
+  } else if (op === 2) {
+    ttbom++;
+  }
+}
+
+var mdidot = ttidot / ttot;
+var pcbom = (ttbom / espc) * 100;
+
+document.write("Média das idades das pessoas que responderam ótimo: " + mdidot.toFixed(2) + "<br>");
+document.write("Quantidade de pessoas que responderam regular: " + ttreg + "<br>");
+document.write("Percentual de pessoas que responderam bom: " + pcbom.toFixed(2) + "%<br>");
+</script>

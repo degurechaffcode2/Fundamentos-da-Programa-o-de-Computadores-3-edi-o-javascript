@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a>
+        Faça um programa que receba a idade e a altura de várias pessoas, calcule e mostre a média das alturas</br>
+        daquelas com mais de 50 anos. Para encerrar a entrada de dados, digite idade menor ou igual a zero.</br>    </a><hr>
+    </a><hr>
+    </body>
+</html>
+<script>
+var smalt = 0;
+var contalt = 0;
+var id = parseInt(prompt("Idade da pessoa (ou idade menor ou igual a zero para encerrar):"));
+
+while (id > 0) {
+  var altura = parseFloat(prompt("Altura da pessoa:"));
+  if (id > 50) {
+    smalt += altura;
+    contalt++;
+  }
+  id = parseInt(prompt("Idade da pessoa (ou idade menor ou igual a zero para encerrar):"));
+}
+var mediaAlturas = smalt / contalt;
+document.write("A média das alturas das pessoas com mais de 50 anos é: " + mediaAlturas.toFixed(2));
+</script>

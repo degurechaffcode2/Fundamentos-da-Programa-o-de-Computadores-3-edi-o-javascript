@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a>Faça um programa que receba a id, a alt e o peso de cinco pessoas, calcule e mostre:</a></br>
+        <a> a quantidade de pessoas com id superior a 50 anos;</a></br>
+        <a> a média das alturas das pessoas com id entre 10 e 20 anos;</a></br>
+        <a> a porcentagem de pessoas com peso inferior a 40 kg entre todas as pessoas analisadas.</a></br>
+        <hr>
+    </body>
+</html>
+<script>
+var pessoas = 5;
+var contidsup50 = 0;
+var sm1020 = 0;
+var contps40 = 0;
+
+for (var i = 1; i <= pessoas; i++) {
+  var id = parseInt(prompt("Idade da pessoa " + i + ":"));
+  var alt = parseFloat(prompt("Altura da pessoa " + i + " (use . ex 1.76):"));
+  var peso = parseFloat(prompt("Peso da pessoa " + i + " (use . ex 76.60):"));
+  if (id > 50) {
+    contidsup50++;
+  }
+  if (id >= 10 && id <= 20) {
+    sm1020 += alt;
+  }
+  if (peso < 40) {
+    contps40++;
+  }
+}
+var mdaltid1020 = sm1020 / pessoas;
+var pcpsinf40 = (contps40 / pessoas) * 100;
+document.write("Quantidade de pessoas com id superior a 50 anos: " + contidsup50 + "<br>");
+document.write("Média das alturas das pessoas com id entre 10 e 20 anos: " + mdaltid1020.toFixed(2) + " metros<br>");
+document.write("Porcentagem de pessoas com peso inferior a 40 kg: " + pcpsinf40.toFixed(2) + "%<br>");
+</script>

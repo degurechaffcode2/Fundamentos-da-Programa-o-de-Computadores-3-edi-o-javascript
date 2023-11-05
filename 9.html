@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a>
+            Faça um programa que receba dez idades, pesos e alturas, calcule e mostre:</br>
+            ■■ a média das idades das dez pessoas;</br>
+            ■■ a quantidade de pessoas com peso superior a 90 kg e altura inferior a 1,50 metro; e</br>
+            ■■ a porcentagem de pes com idade entre 10 e 30 anos entre as pessoas que medem mais de
+            1,90 m.</a></br><hr>
+    </body>
+</html>
+<script>
+var pes = 10;
+var smid = 0;
+var contps90alt150 = 0;
+var contid1030alt190 = 0;
+for (var i = 1; i <= pes; i++) {
+  var idade = parseInt(prompt("idade da pessoa " + i + ":"));
+  var peso = parseFloat(prompt("peso da pessoa " + i + " :"));
+  var altura = parseFloat(prompt("altura da pessoa " + i + ":"));
+  smid += idade;
+  if (peso > 90 && altura < 1.50) {
+    contps90alt150++;
+  }
+  if (idade >= 10 && idade <= 30 && altura > 1.90) {
+    contid1030alt190++;
+  }
+}
+var mediaIdades = smid / pes;
+var pcid1030alt190 = (contid1030alt190 / pes) * 100;
+document.write("Média das idades das dez pessoas: " + mediaIdades.toFixed(2) + " anos<br>");
+document.write("Quantidade de pessoas com peso superior a 90 kg e altura inferior a 1,50 metros: " + contps90alt150 + "<br>");
+document.write("Porcentagem de pessoas com idade entre 10 e 30 anos entre as pessoas que medem mais de 1,90 metros: " + pcid1030alt190.toFixed(2) + "%<br>");
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a>
+        Faça um programa que receba a idade e o peso de quinze pessoas, e que calcule e mostre as médias dos<br>
+        pesos das pessoas da mesma faixa etária. As faixas etárias são: de 1 a 10 anos, de 11 a 20 anos, de 21 a<br>
+        30 anos e de 31 anos para cima.
+    </a><hr>
+  </body>
+</html>
+<script>
+var pessoas = 15;
+var fx1ps = 0;
+var fx1cont = 0;
+var fx2ps = 0;
+var fx2cont = 0;
+var fx3ps = 0;
+var fx3cont = 0;
+var fx4ps = 0;
+var fx4cont = 0;
+
+for (var i = 1; i <= pessoas; i++) {
+  var id = parseInt(prompt("Digite a idade" + i + ":"));
+  var peso = parseFloat(prompt("Digite o peso" + i + ":"));
+
+  if (id >= 1 && id <= 10) {
+    fx1ps += peso;
+    fx1cont++;
+  } else if (id >= 11 && id <= 20) {
+    fx2ps += peso;
+    fx2cont++;
+  } else if (id >= 21 && id <= 30) {
+    fx3ps += peso;
+    fx3cont++;
+  } else {
+    fx4ps += peso;
+    fx4cont++;
+  }
+}
+var mdfx1 = fx1ps / fx1cont;
+var mdfx2 = fx2ps / fx2cont;
+var mdfx3 = fx3ps / fx3cont;
+var mdfx4 = fx4ps / fx4cont;
+document.write("Média de pesos de 1 a 10 anos: " + mdfx1.toFixed(2) + "<br>");
+document.write("Média de pesos de 11 a 20 anos: " + mdfx2.toFixed(2) + "<br>");
+document.write("Média de pesos de 21 a 30 anos: " + mdfx3.toFixed(2) + "<br>");
+document.write("Média de pesos acima de 31 anos:" + mdfx4.toFixed(2) + "<br>");
+</script>
